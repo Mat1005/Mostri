@@ -1,4 +1,3 @@
-n = 1
 import os
 from random import choice
 
@@ -97,7 +96,7 @@ class Field:
   def _init_(self, levelNumber):
     self.entities = []
     self.score = 0
-    self.levelNumber = n
+    self.levelNumber = levelNumber
     self.livingentities = []
 
     f = open("./level" + str(n) + ".txt", "r")
@@ -158,7 +157,7 @@ def check_victory(field):
     sconfitta = True
     
         
-field = Field(n)
+field = Field(1)
 
 def clear_screen():
   if os.name == "nt":
